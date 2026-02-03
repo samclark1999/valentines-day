@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oops! 💔</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="hearts-background">
+        <div class="cupid cupid-1"></div>
+        <div class="cupid cupid-2"></div>
+        <div class="cupid cupid-3"></div>
+        <div class="cupid cupid-4"></div>
+        <div class="cupid cupid-5"></div>
+
+        <div class="floating-heart heart-pos-1" style="background-image: url('heart1.svg');"></div>
+        <div class="floating-heart heart-pos-2" style="background-image: url('heart2.svg');"></div>
+        <div class="floating-heart heart-pos-3" style="background-image: url('heart3.svg');"></div>
+        <div class="floating-heart heart-pos-4" style="background-image: url('heart4.svg');"></div>
+        <div class="floating-heart heart-pos-5" style="background-image: url('heart1.svg');"></div>
+        <div class="floating-heart heart-pos-6" style="background-image: url('heart2.svg');"></div>
+        <div class="floating-heart heart-pos-7" style="background-image: url('heart3.svg');"></div>
+        <div class="floating-heart heart-pos-8" style="background-image: url('heart4.svg');"></div>
+    </div>
+
+    <div class="container">
+        <div class="response-box">
+            <div class="tenor-gif-embed" data-postid="12005166819415822979" data-share-method="host" data-aspect-ratio="1.76596" data-width="100%">
+                <a href="https://tenor.com/view/nanalan-are-you-feeling-mad-mad-sad-mona-gif-12005166819415822979">Nanalan Are You Feeling Mad GIF</a>
+                from <a href="https://tenor.com/search/nanalan-gifs">Nanalan GIFs</a>
+            </div>
+
+            <h2 class="error-message">You must have made a mistake. You will be redirected to the correct page…</h2>
+
+            <div class="countdown">
+                <span id="timer">10</span>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    <script>
+        let timeLeft = 10;
+        const timerElement = document.getElementById('timer');
+
+        const countdown = setInterval(() => {
+            timeLeft--;
+            timerElement.textContent = timeLeft;
+
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                window.location.href = 'yes.html';
+            }
+        }, 1000);
+    </script>
+    <script src="cupid-animation.js"></script>
+</body>
+</html>
